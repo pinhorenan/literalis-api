@@ -8,7 +8,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/books")
-@CrossOrigin(origins = "https://pinhorenan.github.io")  // ou "*" para testar
+@CrossOrigin(origins = "*", allowedHeaders = "*", methods = { RequestMethod.GET, RequestMethod.OPTIONS })
 public class BookSearchController {
     private final GoogleBooksService service;
     public BookSearchController(GoogleBooksService service) {
